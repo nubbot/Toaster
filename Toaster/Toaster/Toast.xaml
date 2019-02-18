@@ -1,12 +1,14 @@
-﻿<Window x:Class="Toaster.MainWindow"
+﻿<Window x:Class="Toaster.Toast"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Toaster"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="btnTest" Content="Click to test" Click="BtnTest_Click"/>
-    </Grid>
+        d:DesignHeight="60"
+        d:DesignWidth="300"
+        WindowStyle="None" Height="60" SizeToContent="Width" AllowsTransparency="True" Topmost="True" ShowActivated="False">
+    <StackPanel VerticalAlignment="Center">
+        <TextBlock x:Name="tbMessage" Text="Placeholder text" Padding="10,0,10,0"/>
+    </StackPanel>
 </Window>

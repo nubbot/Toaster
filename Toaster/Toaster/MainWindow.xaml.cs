@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Toaster
@@ -23,6 +22,15 @@ namespace Toaster
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnTest_Click(object sender, RoutedEventArgs e)
+        {
+            new ToastBuilder()
+                .SetMessage("Hello, I am a toastlong long long long")
+                .SetIntervalInMs(800)
+                .SetBackgroundColor("#BB4286f4")
+                .Show();
         }
     }
 }
